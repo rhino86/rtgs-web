@@ -4,7 +4,7 @@
     <div class="col-sm-6 mx-auto">
         <div class="card">
             <div class="card-body">
-                <form action="" method="post">
+                <form action="{{ route('login.auth') }}" method="post">
                     @csrf
                     <div class="form-group">
                         <label for="email">Email</label>
