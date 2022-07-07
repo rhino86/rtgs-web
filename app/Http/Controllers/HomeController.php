@@ -13,12 +13,24 @@ class HomeController extends Controller
     }
 
     public function auth(Request $request)
-    {
-        $response = Http::accept('application/json')->post('http://localhost:3000/auth/login', [
+    {   
+        $data = [
             "channel_id" => $request->email,
             "password" => $request->password
-        ]);
+        ];
+        $response = Http::accept('application/json')->post('http://localhost:3000/auth/login', $data);
+        $jsonResponse = json_decode($response);
+        dd($jsonResponse); 
+    }
 
-        dd($response); 
+    public function register(Request $request)
+    {   
+        $data = [
+            "channel_id" => $request->email,
+            "password" => $request->password
+        ];
+        $response = Http::accept('application/json')->post('http://localhost:3000/auth/login', $data);
+        $jsonResponse = json_decode($response);
+        dd($jsonResponse); 
     }
 }

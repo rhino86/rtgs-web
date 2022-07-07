@@ -20,3 +20,4 @@ use App\Http\Controllers\HomeController as HomeController;
 
 Route::get("/", [HomeController::class, "login"])->name("login");
 Route::post("/auth", [HomeController::class, "auth"])->name("login.auth");
+Route::post("/register", [HomeController::class, "register"])->name("login.register");

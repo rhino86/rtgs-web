@@ -4,13 +4,7 @@
     <div class="col-sm-6">
         <div class="card">
             <div class="card-body">
-                <h3>Login</h3>
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Perhatian!</strong> Email dan Password anda tidak tepat.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+                <h3>Register Your Account</h3>
                 <form action="{{ route('login.auth') }}" method="post">
                     @csrf
                     <div class="form-group">
